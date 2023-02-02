@@ -1,0 +1,102 @@
+<html>
+    <heading></heading>
+    <body>
+        <h1>Pizza Order</h1>
+        
+        <label>Small $5</label><br>
+        <input type="number" name="Small" id="Small"><br>
+        
+        <label>Medium $8</label><br>
+        <input type="number" name="Medium" id="Medium"><br>
+        
+        <label>Large $10</label><br>
+        <input type="number" name="Large" id="Large"><br>
+        
+        <label>Toppings $1/Each</label><br>
+        <input type="number" name="Toppings" id="Toppings"><br>
+        
+        <label>Drink Small $2</label><br>
+        <input type="number" name="Small Drink" id="Drink1"><br>    
+        
+        <label>Drink Medium $4</label><br>
+        <input type="number" name="Medium Drink" id="Drink2"><br> 
+        
+        <label>Drink Large $6</label><br>
+        <input type="number" name="Large Drink" id="Drink3"><br> 
+       
+        <button onclick="grandTotal()"> Total </button>
+        
+        
+        <script>
+            function small(){
+            var small=Number(document.getElementById('Small').value);
+            var cost1= small * 5;
+            alert("small" + cost1);
+            return cost1;
+        }
+            function medium(){
+            var medium=Number(document.getElementById('Medium').value);
+            var cost2= medium * 8;
+            alert("medium" + cost2);
+            return cost2;
+        }
+            function large(){
+            var large=Number(document.getElementById('Large').value);
+            var cost3= large * 10;
+            alert("large" + cost3);
+            return cost3;
+        }
+            function toppings(){
+            var toppings=Number(document.getElementById('Toppings').value);
+            var cost4= toppings * 1;
+            alert("toppings" + cost4);
+            return cost4;
+        }
+            function smalldr(){
+            var smalld = Number(document.getElementById('Drink1').value);
+            var cost5= smalld * 2;
+            alert("small drink" + cost5);
+            return cost5;
+        }
+            function mediumdr(){
+            var mediumd=Number(document.getElementById('Drink2').value);
+            var cost6= mediumd * 4;
+            alert("medium drink" + cost6);
+            return cost6;
+        }
+            function largedr(){
+            var larged=Number(document.getElementById('Drink3').value);
+            var cost7= larged * 6;
+            alert("large drink" + cost7);
+            return cost7;
+        }
+            function grandTotal(){
+            var small1 = small();
+            small1 = parseFloat(small1);
+
+            var small2 = medium();
+            small1 = parseFloat(small2);
+
+            var small3 = large();
+            small1 = parseFloat(small3);
+
+            var small4 = toppings();
+            small4 = parseFloat(small4);
+
+            var small5 = smalldr();
+            small5 = parseFloat(small5);
+
+            var small6 = mediumdr();
+            small6 = parseFloat(small6);
+
+            var small7 = largedr();
+            small7 = parseFloat(small7);
+
+            var subTotalcost = small1 + small2 + small3 + small4 + small5 + small6 + small7 
+            var grandTotalcost = subTotalcost * 0.13 + subTotalcost
+            
+            alert("Your subtotal without tax is $" + subTotalcost + "and your grandtotal is $" + grandTotalcost);
+        }
+        </script>
+    </body>
+</html>
